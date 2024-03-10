@@ -1,0 +1,22 @@
+
+
+h1 {
+    text-align: center;
+}
+body.blanco {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.negro {
+    background-color: #000000;
+    color: #ffffff;
+}
+.blanco{
+    background-color: black;
+    color:white;
+}
+.negro{
+    background-color: white;
+    color:black;
+}

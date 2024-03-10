@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Configuración</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+    <script src="js/configuracion.js"></script>
+    <h1>Configuración</h1>
     
+    <label for="color">Selecciona un color:</label>
+    <select id="color">
+        <option value="blanco">Blanco</option>
+        <option value="negro">Negro</option>
+    </select>
+    
+    <label for="idioma">Selecciona un idioma:</label>
+    <select id="idioma">
+        <option value="es">Español</option>
+        <option value="fr">Francés</option>
+        <option value="ig">Inglés</option>
+    </select>
+    
+    <button id="guardarConfig">Guardar Configuración</button>
 </body>
 </html>
