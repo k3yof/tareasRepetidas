@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     tabla.parentElement.prepend(buscar);
 
     buscar.addEventListener('input', evento => {
-        const filtro = evento.target.value.toLowerCase();
+        const filtro = evento.target.value.trim(); 
         const filas = tabla.querySelectorAll('.fila');
 
         filas.forEach(fila => {
             let coincide = false;
             fila.querySelectorAll('td').forEach(celda => {
-                const texto = celda.textContent.toLowerCase();
-                if (texto.includes(filtro)) {
+                const textoCelda = celda.textContent.trim(); 
+                if (textoCelda === filtro) { 
                     coincide = true;
                 }
             });
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     const cantidadFilas = 3000;
     const cantidadColumnas = 5;
-    const lorem = 'lorem3';
 
     for (let i = 0; i < cantidadFilas; i++) {
         const fila = document.createElement('tr');
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let j = 0; j < cantidadColumnas; j++) {
             const celda = document.createElement('td');
-            celda.textContent = lorem;
+            celda.textContent = Math.floor(Math.random() * 2000);
             fila.appendChild(celda);
         }
 
